@@ -1,0 +1,43 @@
+@use "sass:map";
+
+@use "@/styles/utils/color.module.scss" as color;
+
+$primary-color: (
+  "main": color.$purple,
+  "dark": color.$purple-secound,
+  "modal": color.$purple-modal,
+  "light": color.$purple-thrid,
+  "border": rgb(5, 5, 5),
+  "background": rgb(250, 250, 250),
+  "text": rgb(5, 5, 5),
+  "highlight-text": rgb(255, 165, 165),
+);
+
+@mixin hexagon-clip-path($length) {
+  clip-path: polygon(
+    calc(0% + $length) 0,
+    100% 0,
+    100% calc(100% - $length),
+    calc(100% - $length) 100%,
+    0 100%,
+    0 calc(0% + $length)
+  );
+}
+
+$border: (
+  "width": 1px,
+  "radius": 5px,
+);
+
+$primary-color-main: map.get($primary-color, "main");
+$primary-color-light: map.get($primary-color, "light");
+$primary-color-dark: map.get($primary-color, "dark");
+$primary-color-modal: map.get($primary-color, "modal");
+
+
+
+:export {
+  primary-color-main: map.get($primary-color, "main");
+  primary-color-light: map.get($primary-color, "light");
+  primary-color-dark: map.get($primary-color, "dark");
+}

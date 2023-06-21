@@ -1,0 +1,17 @@
+@use "@/styles/utils/theme.module.scss" as theme;
+
+.card{
+    padding: 1rem;
+    background-color: theme.$primary-color-dark;
+    border-radius: 10px;
+    width: 100%;
+    &+.card{
+        margin-top: 1.5rem;
+    }
+    .body{
+        white-space:normal;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        max-width: 100%; 
+    }
+}

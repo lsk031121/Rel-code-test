@@ -1,0 +1,16 @@
+@use "@/styles/utils/theme.module.scss" as theme;
+
+.container {
+  height: fit-content;
+  min-height: 100vh;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: black;
+  white-space: pre-line;
+  padding: 1rem 4rem;
+  background: theme.$primary-color-light;
+  align-items: center;
+  margin: auto;
+}

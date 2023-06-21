@@ -1,0 +1,27 @@
+.userCard {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+
+  .center {
+    text-align: center;
+  }
+
+  & .container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "img dtl";
+
+    @media screen and (max-width: 550px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "img""dtl";
+      gap: 24px;
+    }
+  }
+
+}
